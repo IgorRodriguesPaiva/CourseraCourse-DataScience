@@ -1,3 +1,4 @@
+#R Programming - Week2 - Assignment - pt1
 # Write a function named 'pollutantmean' that calculates the mean of a 
 #pollutant (sulfate or nitrate) across a specified list of monitors. 
 #The function 'pollutantmean' takes three arguments: 
