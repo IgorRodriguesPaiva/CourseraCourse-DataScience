@@ -60,4 +60,4 @@ rankhospital <- function(state, outcome, num){
     
     return(SortData[rank,]$Hospital.Name)
     
-}
+} 
