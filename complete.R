@@ -4,7 +4,7 @@
 #data frame where the first column is the name of the file and the second column
 #is the number of complete cases. A prototype of this function follows
 
-Mycomplete <- function(directory, index = 1:332){
+complete <- function(directory, index = 1:332){
     library(plyr)
     data_path <- paste0(getwd(),"/", directory)
     temp = list.files(path = data_path, pattern= ".csv")
