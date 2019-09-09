@@ -6,7 +6,7 @@
 ##If no monitors meet the threshold requirement, then the function should
 ##return a numeric vector of length 0. 
 
-Mycorr <- function(directory, threshold){
+corr <- function(directory, threshold){
     library(plyr)
     corr_vect <- NULL
     aux_dataframe <- data.frame(NULL)
