@@ -7,7 +7,7 @@
 #mean of the pollutant across all of the monitors, ignoring any missing 
 #values coded as NA.
 
-Mypollutantmean <- function(directory, pollutant, index = 1:332){
+pollutantmean <- function(directory, pollutant, index = 1:332){
     library(plyr)
     data_path <- paste0(getwd(),"/", directory)
     temp = list.files(path = data_path, pattern= ".csv")
