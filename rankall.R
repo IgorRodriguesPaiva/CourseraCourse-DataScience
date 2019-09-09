@@ -66,4 +66,4 @@ rankall <- function(outcome, num = "best"){
     }
     
     return(RankList)
-}
+} 
