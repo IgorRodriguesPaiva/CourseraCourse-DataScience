@@ -50,7 +50,7 @@ best <- function(state, outcome){
         
     bestHospital <- LowMortality$Hospital.Name
     return(bestHospital)
-}
+} 
 
 
 
