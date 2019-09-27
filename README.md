@@ -1,2 +1,2 @@
 # CourseraCourse-DataScience
-Projects from my Data Science course on Coursera.
+Projects from my Data Science Formation, Course R-Programming on Coursera.
