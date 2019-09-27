@@ -4,10 +4,10 @@ and a description.
 
 
 ############################################### CODE ############################################
-## Downloading data:
+##Downloading data:
 Dataset downloaded and extracted in a folder named UCI HAR Dataset
 
-## Loading data:
+##Loading data:
 
 activity_labels <- read.table("UCI HAR Dataset/activity_labels.txt", col.names = c("task_code", "task"))
 features <- read.table("UCI HAR Dataset/features.txt", col.names = c("n","functions"))
@@ -41,7 +41,7 @@ y_train <- test/y_train.txt : 7352 rows, 1 columns
 
 ################################################### CODE ####################################################
 
-## Merging the training and the test sets to create one data set.:
+##Merging the training and the test sets to create one data set.:
 Xdata <- rbind(x_train, x_test)
 Ydata <- rbind(y_train, y_test)
 Subject <- rbind(subject_train, subject_test)
@@ -56,12 +56,12 @@ MergedData (10299 rows, 563 column) is created by merging Subject, Y and X using
 
 ################################################### CODE ####################################################
 
-## MergedData is our dataset.
+##MergedData is our dataset.
 
-## Extracting only the measurements on the mean and 
-## standard deviation for each measurement. I used the select
-## command to get only the subject and code colummns and also
-## the colummns that show the std and mean for each measurement.
+##Extracting only the measurements on the mean and 
+##standard deviation for each measurement. I used the select
+##command to get only the subject and code colummns and also
+##the colummns that show the std and mean for each measurement.
 CleanData <- select(MergedData, subject, code, contains("mean"), contains("std"))
 
 ################################################# DESCRIPTION #############################################
@@ -71,8 +71,8 @@ measurements on the mean and (std) for each measurement
 
 ################################################### CODE ####################################################
 
-## Here I used the descriptive activity names, present on the
-## activity_labels table, in order to name the activities in the data set:
+##Here I used the descriptive activity names, present on the
+##activity_labels table, in order to name the activities in the data set:
 CleanData$code <- activity_labels[CleanData$code, 2]
 
 ################################################# DESCRIPTION #############################################
@@ -81,7 +81,7 @@ Entire numbers in code column of the TidyData replaced with corresponding activi
 
 ################################################### CODE ####################################################
 
-## Appropriately labels the data set with descriptive variable names.
+##Appropriately labels the data set with descriptive variable names.
 names(CleanData)[2] = "Tasks"
 names(CleanData)<-gsub("Acc", "Accelerometer", names(CleanData))
 names(CleanData)<-gsub("^t", "Time", names(CleanData))
@@ -110,9 +110,9 @@ All MeanFreq in column’s name replaced by MeanFrequency
 
 ################################################### CODE ####################################################
 
-## From the data set CleanData, now we creates a second, independent 
-## tidy data set with the average of each variable for each activity 
-## and each subject.
+##From the data set CleanData, now we creates a second, independent 
+##tidy data set with the average of each variable for each activity 
+##and each subject.
 
 SecondTidyData <- group_by(CleanData, subject, Tasks) %>%
                   summarise_all(list(mean = mean))    
