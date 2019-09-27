@@ -1,4 +1,4 @@
->>>>>> SEE RAW VERSION FOR BETTER VISUALIZATION <<<<<<<<<<
+<<<<<<<<< SEE RAW VERSION FOR BETTER VISUALIZATION <<<<<<<<<<
 
 The run_analysis.R script performs accordint to the description on the run_analysis.README.md documment.
 Here are a step-by-step description of the program and an explanation of the variables. Each section is divided by part of the text code 
