@@ -23,7 +23,7 @@ FinalData <- cbind(Date_Time, FinalData)
 FinalData <- FinalData[-c(2,3)]
 
 ## Plot 4:
-png(filename = "Plot4.png")
+png(filename = "Plot4.png", width = 480, height = 480)
 par(mfrow=c(2,2))
 
 with(FinalData, plot(Date_Time, Global_active_power, 
