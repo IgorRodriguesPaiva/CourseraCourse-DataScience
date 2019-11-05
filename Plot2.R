@@ -23,7 +23,7 @@ FinalData <- cbind(Date_Time, FinalData)
 FinalData <- FinalData[-c(2,3)]
 
 ## Plot 2:
-png(filename = "Plot2.png")
+png(filename = "Plot2.png", width = 480, height = 480)
 with(FinalData, plot(Date_Time, Global_active_power, 
                      type="l", col="black", xlab="", 
                      ylab="Global Active Power (kilowatts)"))
