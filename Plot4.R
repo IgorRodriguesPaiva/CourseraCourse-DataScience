@@ -46,3 +46,4 @@ with(FinalData, plot(Date_Time, Global_reactive_power,
                      type="l", col="black", xlab="datetime", 
                      ylab="Global_reactive_power"))
 dev.off()
+ 
