@@ -23,7 +23,7 @@ FinalData <- cbind(Date_Time, FinalData)
 FinalData <- FinalData[-c(2,3)]
 
 ## Plot 3:
-png(filename = "Plot3.png")
+png(filename = "Plot3.png", width = 480, height = 480)
 plot(finalData$SetTime, finalData$Sub_metering_1, type="l", 
      col="black", xlab="", ylab="Energy sub metering")
 lines(finalData$SetTime, finalData$Sub_metering_2, col="red")
