@@ -23,7 +23,7 @@ FinalData <- cbind(Date_Time, FinalData)
 FinalData <- FinalData[-c(2,3)]
 
 ## Plot 1:
-png(filename = "Plot1.png")
+png(filename = "Plot1.png", width = 480, height = 480)
 hist(FinalData$Global_active_power, col = "red",
         main = "Global Active Power", 
         xlab = "Global Active Power (kilowatts)")
