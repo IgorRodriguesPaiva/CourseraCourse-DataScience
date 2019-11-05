@@ -28,3 +28,4 @@ with(FinalData, plot(Date_Time, Global_active_power,
                      type="l", col="black", xlab="", 
                      ylab="Global Active Power (kilowatts)"))
 dev.off()
+ 
